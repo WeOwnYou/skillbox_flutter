@@ -1,8 +1,6 @@
 import 'dart:math';
 
 void main() {
-  // print(primeFactors(1024));
-  print(numbersInText('one, two, three, , zero, zero cat, dog'));
 }
 
 List<int> primeFactors(int number) {
@@ -116,9 +114,8 @@ List<int> numbersInText(String text) {
     'eight',
     'nine'
   ];
-  List<String> words = text.toLowerCase()
-      .replaceAll(RegExp(r"[^\w\s]+"), ' ')
-      .split(' ');
+  List<String> words =
+      text.toLowerCase().replaceAll(RegExp(r"[^\w\s]+"), ' ').split(' ');
   for (String word in words) {
     for (int i = 0; i < wordNumbers.length; i++) {
       if (word == wordNumbers[i]) {
@@ -131,5 +128,3 @@ List<int> numbersInText(String text) {
   }
   return numbers;
 }
-
-
