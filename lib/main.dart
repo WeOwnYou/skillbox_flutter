@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -49,16 +49,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       return Container(
                           width: MediaQuery.of(context).size.width,
                           margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                          decoration: const BoxDecoration(color: Colors.amber),
+                          decoration: const BoxDecoration(color: Colors.lightBlue),
                           child: Text(
                             'text $i',
-                            style: const TextStyle(fontSize: 16.0),
+                            style: const TextStyle(fontSize: 35.0),
                           ));
                     },
                   );
                 }).toList(),
                 options: CarouselOptions(height: 400.0)),
-            // SvgPicture.asset('assets/vintage-black-cat-poster.svg'),
+            SvgPicture.asset('assets/vintage-black-cat-poster.svg'),
             // Image.asset('assets/images/test.jpg'),
           ],
         ),
